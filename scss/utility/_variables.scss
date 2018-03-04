@@ -1,0 +1,101 @@
+// ==========================================================================
+// Utility Variables
+// ==========================================================================
+
+// Font Families
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+$font-family--primary	: 'Roboto Condensed', sans-serif;
+$font-family--secondary	: Helvetica, Arial, sans-serif;
+
+
+// Font Weights
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+
+// Descriptive Base Colors
+$black          : #0b0b0b;
+$gray           : #808080;
+$white          : #fff;
+
+$cardinal       : #B61B2E;
+$saffron        : #F6AE3C;
+$emerald        : #50C878;
+$azure-radiance : #007BFF;
+$purple-heart   : #652DC1;
+
+// Color Palette Modifiers
+$color-palettes: (
+	gray: (
+	    light       : lighten($gray, 15%),
+	    base        : $gray,
+	 	dark        : darken($gray, 15%),
+	),
+	black: (
+	    light       : lighten($black, 15%),
+		base        : $black,
+		dark        : darken($black, 15%)
+	),
+	red: (
+		light		: lighten($cardinal, 15%),
+		base		: $cardinal,
+		dark		: darken($cardinal, 15%)
+	),
+	orange: (
+		light		: lighten($saffron, 15%),
+		base		: $saffron,
+		dark		: darken($saffron, 15%)
+	),
+	green: (
+		light		: lighten($emerald, 15%),
+		base		: $emerald,
+		dark		: darken($emerald, 15%)
+	),
+    blue: (
+        light       : lighten($azure-radiance, 15%),
+        base        : $azure-radiance,   
+        dark        : darken($azure-radiance, 15%)
+	)
+);
+
+// Color Usage
+$color-text--primary    : $white;
+$color-text--secondary  : $saffron;
+$color-text--tertiary	: palette(gray, light);
+$color-link--default    : $azure-radiance;
+
+// UI Colors
+$ui-colors: (
+	default : $azure-radiance,
+	success : $emerald,
+	error   : $cardinal,
+	warning : $saffron,
+	info    : $purple-heart
+);
+
+// Alpha Shadow
+$shadow-dark : rgba(palette(black, dark), 0.7);
+
+// Text
+$base__font-size : 16px;
+
+// Border Radius
+$br--default    : 0.625em;
+$br--round      : 50%;
+
+// Transitions
+$trans-duration--short : 0.25s;
+$trans-duration--default : 0.5s;
+$trans-duration--long : 0.75s;
+
+// Path to Assets
+$path--img	: '../img';
+
+// Breakpoints
+$break-sm   : 575px;
+$break-md   : 767px;
+$break-lg   : 991px;
+$break-xl   : 1199px;
+
+// Flex Layout
+$f-col-count : 12;

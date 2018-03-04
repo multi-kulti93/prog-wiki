@@ -1,0 +1,10 @@
+// ==========================================================================
+// Breadcrumb Module
+// ==========================================================================
+.breadcrumb {
+    background-color: rgba(palette(black, light), 0.5);
+
+    &-item.active {
+        color: palette(gray, light);
+    }
+}

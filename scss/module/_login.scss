@@ -1,0 +1,62 @@
+// ==========================================================================
+// Login Module
+// ==========================================================================
+.login {
+    @extend %flex-col;
+    @include alpha-border--shadowed(palette(black, dark), 0.7);
+
+    padding: 2.5em;
+    width: 90%;
+    max-width: 400px;
+
+    @include mq-max("sm") {
+        min-width: 300px;
+    }
+
+
+    @include e(header) {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+
+    @include e(inputBox) {
+        position: relative;
+    }
+
+
+    @include e(input) {
+        width: 100%;
+        padding: 0.625em 0;
+        color: $color-text--primary;
+        margin-bottom: 1.875em;
+        border: none;
+        border-bottom: 1px solid $white;
+        outline: none;
+        background: transparent;
+
+        &:focus ~ label,
+        &:valid ~ label {
+            top: -1.25em;
+            left: 0;
+            color: palette(blue);
+            font-size: 0.75em;
+        }
+    }
+
+
+    @include e(label) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.625em 0;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+
+    @include e(button) {
+        width: 100%;
+    }
+}

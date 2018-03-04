@@ -1,0 +1,83 @@
+// ==========================================================================
+// Layout Mixins
+// ==========================================================================
+// position flex
+@mixin flex-position($justify: null, $align: null) {
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// generate flex columns
+@mixin f-columns {
+    @for $i from 1 through $f-col-count {
+        $percentage: $i / $f-col-count * 100%;
+
+        &--#{$i} {
+            flex: 1 $percentage;
+        }
+    }
+}
+
+// borders
+@mixin alpha-border($color, $alpha: 1) {
+    background-color: rgba($color, $alpha);
+    border-radius: $br--default;
+}
+
+@mixin alpha-border--shadowed($color, $alpha: 1) {
+    @include alpha-border($color, $alpha);
+    box-shadow: 0 0.9em 1.5em $shadow-dark;
+}
+
+// Media Queries
+@mixin mq-max($break) {
+    @if $break == "sm" {
+        @media (max-width: $break-sm) {
+            @content;
+        }
+    }
+    @else if $break == "md" {
+        @media (max-width: $break-md) {
+            @content;
+        }
+    }
+    @else if $break == "lg" {
+        @media (max-width: $break-lg) {
+            @content;
+        }
+    }
+    @else if $break == "xl" {
+        @media (max-width: $break-xl) {
+            @content;
+        }
+    }
+    @else {
+        @error "Whoops! No value could be retrieved for `#{$break}`. ";
+    }
+}
+
+@mixin mq-min($break) {
+    @if $break == "sm" {
+        @media (min-width: $break-sm + 1) {
+            @content;
+        }
+    }
+    @else if $break == "md" {
+        @media (min-width: $break-md + 1) {
+            @content;
+        }
+    }
+    @else if $break == "lg" {
+        @media (min-width: $break-lg + 1) {
+            @content;
+        }
+    }
+    @else if $break == "xl" {
+        @media (min-width: $break-xl + 1) {
+            @content;
+        }
+    }
+    @else {
+        @error "Whoops! No value could be retrieved for `#{$break}`. ";
+    }
+}

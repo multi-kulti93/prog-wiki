@@ -1,0 +1,17 @@
+// ==========================================================================
+// Layout Extends
+// ==========================================================================
+%flex {
+    display: flex;
+}
+
+%flex-col {
+    @extend %flex;
+    flex-direction: column;
+}
+
+%flex-row {
+    @extend %flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,28 @@
+// ==========================================================================
+// Flex Container
+// ==========================================================================
+.l_flex-x {
+    @extend %flex-row;
+}
+
+.l_flex-y {
+    @extend %flex-col;
+}
+
+.l_flex-centered {
+    @extend .l_flex-y;
+
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.container {
+    @extend .l_flex-y;
+
+    @include alpha-border--shadowed(palette(black, dark), 0.75);
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}

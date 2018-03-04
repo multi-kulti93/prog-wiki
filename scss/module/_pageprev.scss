@@ -1,0 +1,15 @@
+// ==========================================================================
+// Pageprev Module
+// ==========================================================================
+.pageprev {
+    &__title {
+        font-size: 1.5em;
+        color: $color-text--tertiary;
+        font-weight: $font-weight--bold;
+
+        &:hover,
+        &:visited {
+            color: $color-text--tertiary;
+        }
+    }
+}

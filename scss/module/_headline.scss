@@ -1,0 +1,20 @@
+// ==========================================================================
+// Headline Module
+// ==========================================================================
+
+.headline {
+    &--primary {
+        color: $color-text--primary;
+        border-color: $color-text--primary;
+    }
+
+    &--secondary {
+        color: $color-text--secondary;
+        border-color: $color-text--secondary;
+    }
+
+    &--tertiary {
+        color: $color-text--tertiary;
+        border-color: $color-text--tertiary;
+    }
+}

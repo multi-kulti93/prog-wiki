@@ -1,0 +1,54 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    @extend %flex-col;
+
+    background: url("#{$path--img}/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: $color-text--primary;
+    font-family: $font-family--primary;
+    font-size: $base__font-size;
+    font-weight: $font-weight--medium;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    border-bottom: 1px solid $white;
+    margin-bottom: 0.75em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 2.0rem;
+    margin-bottom: 0.25em;
+}
+
+a {
+    color: $color-link--default;
+    text-decoration: none;
+
+    &:visited {
+        color: $color-link--default;
+    }
+
+    &:hover {
+        color: palette(blue, "dark");
+    }
+}

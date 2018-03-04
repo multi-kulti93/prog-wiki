@@ -1,0 +1,44 @@
+// ==========================================================================
+// Catlist Module
+// ==========================================================================
+.catlist {
+    @extend %flex-col;
+
+    @include flex-position($align: center);
+
+    flex: 1 100%;
+    margin: 0.5rem 0;
+
+    @include mq-min("sm") {
+        flex: 1 50%;
+    }
+
+
+    @include mq-min("md") {
+        flex: 1 calc(100% / 3);
+    }
+
+
+    @include e(img) {
+        height: 2rem;
+        padding-right: 0.25em;
+    }
+
+
+    @include e(title) {
+        color: $color-text--secondary;
+        font-weight: $font-weight--bold;
+        font-size: 2rem;
+
+        &:visited {
+            color: $color-text--secondary;
+        }
+    }
+
+
+    @include e(item) {
+        a, a:visited {
+            color: $color-text--tertiary;
+        }
+    }
+}
